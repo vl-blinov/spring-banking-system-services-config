@@ -15,6 +15,10 @@ spring:
           uri: lb://ACCOUNT
           predicates:
             - Path=/api/{api-version}/accounts/**
+        - id: record
+          uri: lb://RECORD
+          predicates:
+            - Path=/api/{api-version}/records/**
   zipkin:
     base-url: http://zipkin:9411
 
